@@ -18,10 +18,8 @@ import {
 } from '../../../../errors/console-error'
 import { extractNextErrorCode } from '../../../../../../lib/error-telemetry-utils'
 import { ErrorOverlayLayout } from '../components/errors/error-overlay-layout/error-overlay-layout'
-import type { SupportedErrorEvent } from './runtime-error/use-error-hook'
 
 export type ErrorsProps = {
-  errors: SupportedErrorEvent[]
   readyErrors: ReadyRuntimeError[]
   isTurbopack: boolean
   versionInfo: VersionInfo
@@ -75,7 +73,6 @@ function ErrorDescription({
 }
 
 export function Errors({
-  errors,
   readyErrors,
   debugInfo,
   versionInfo,
@@ -95,8 +92,8 @@ export function Errors({
   }, [onClose])
 
   const isLoading = useMemo<boolean>(() => {
-    return readyErrors.length < 1 && Boolean(errors.length)
-  }, [errors.length, readyErrors.length])
+    return readyErrors.length < 1
+  }, [readyErrors.length])
 
   const [activeIdx, setActiveIndex] = useState<number>(0)
 

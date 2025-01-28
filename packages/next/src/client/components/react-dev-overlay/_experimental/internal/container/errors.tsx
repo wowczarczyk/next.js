@@ -23,7 +23,6 @@ export type ErrorsProps = {
   readyErrors: ReadyRuntimeError[]
   isTurbopack: boolean
   versionInfo: VersionInfo
-  hasStaticIndicator: boolean
   debugInfo: DebugInfo
   onClose: () => void
 }

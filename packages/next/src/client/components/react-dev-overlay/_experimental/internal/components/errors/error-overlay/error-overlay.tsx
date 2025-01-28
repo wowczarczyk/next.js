@@ -39,7 +39,7 @@ export function ErrorOverlay({
   }
 
   // No Runtime Errors.
-  if (!state.errors.length) {
+  if (!readyErrors.length) {
     return null
   }
 
@@ -52,7 +52,6 @@ export function ErrorOverlay({
       debugInfo={state.debugInfo}
       hasStaticIndicator={state.staticIndicator}
       isTurbopack={isTurbopack}
-      errors={state.errors}
       readyErrors={readyErrors}
       versionInfo={state.versionInfo}
       onClose={() => {

@@ -50,7 +50,6 @@ export function ErrorOverlay({
   return (
     <Errors
       debugInfo={state.debugInfo}
-      hasStaticIndicator={state.staticIndicator}
       isTurbopack={isTurbopack}
       readyErrors={readyErrors}
       versionInfo={state.versionInfo}

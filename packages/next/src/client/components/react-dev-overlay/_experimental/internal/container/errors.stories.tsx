@@ -105,7 +105,6 @@ export const Default: Story = {
       installed: '15.0.0',
       staleness: 'fresh',
     },
-    hasStaticIndicator: true,
     isTurbopack: true,
     debugInfo: { devtoolsFrontendUrl: undefined },
     onClose: () => {},
